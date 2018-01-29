@@ -76,7 +76,7 @@ var Movies = React.createClass({
 
 var Movie = React.createClass({
   propTypes: {
-    movie: React.PropTypes.string.isRequired,
+    movie: movies.title,
   },
   render: function() {
     return React.createElement('h2', {className: "title"}, this.props.item.title);
@@ -87,7 +87,7 @@ var Movie = React.createClass({
 
 var MovieDirector = React.createClass({
   propTypes: {
-    item: React.PropTypes.string.isRequired,
+    item: movies.director,
   },
   render: function() {
     return React.createElement('p', {className: "director"}, this.props.item.director);
@@ -98,7 +98,7 @@ var MovieDirector = React.createClass({
 
 var MovieDescription = React.createClass({
   propTypes: {
-    item: React.PropTypes.string.isRequired,
+    item: movies.desc,
   },
   render: function() {
     return React.createElement('p', {className: "description"}, this.props.item.desc);
@@ -108,7 +108,7 @@ var MovieDescription = React.createClass({
 
 var MovieBox = React.createClass({
   propTypes: {
-    item: React.PropTypes.string.isRequired,
+    item: movies.box,
   },
   render: function() {
     return React.createElement('p', {className: "box"}, this.props.item.box);
@@ -118,7 +118,7 @@ var MovieBox = React.createClass({
 
 var MoviePoster = React.createClass({
   propTypes: {
-    item: React.PropTypes.object.isRequired,
+    item: movies.src,
   },
   render: function() {
     return React.createElement('img', {src: this.props.item.src});
